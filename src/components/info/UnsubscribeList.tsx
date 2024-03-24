@@ -20,8 +20,8 @@ const UnsubscribeList = ({
 }: UnsubscribeListProps) => {
   return (
     <div className="flex shadow-lg justify-start mt-10 rounded-b-2xl">
-      <Accordion defaultIndex={[1]} allowMultiple>
-        <AccordionItem>
+      <Accordion className="w-full" defaultIndex={[1]} allowMultiple>
+        <AccordionItem borderTopWidth={"0px"}>
           <AccordionButton padding={"unset"}>
             <TailContainer
               Icon={Icon3}
@@ -29,7 +29,7 @@ const UnsubscribeList = ({
               text={t("info.unsubscribed")}
               useStyle={false}
             />
-            <AccordionIcon />
+            <AccordionIcon className="ms-4" />
           </AccordionButton>
           <AccordionPanel pb={4}>
             <NewsLetterList data={data} />
