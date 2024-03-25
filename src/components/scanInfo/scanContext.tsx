@@ -15,7 +15,7 @@ interface IScanContextValue {
   totalEmailSize: string;
   totalNewsLetterFound: number;
   totalNewsLetterMail: number;
-  duration: ReadStatus;
+  duration: ReadStatus | undefined;
 }
 
 type ScanContextAction =
@@ -31,7 +31,7 @@ const initialState: IScanContextValue = {
   totalEmailSize: "",
   totalNewsLetterFound: 0,
   totalNewsLetterMail: 0,
-  duration: ReadStatus.notInUse,
+  duration: undefined,
 };
 
 const reducer = (

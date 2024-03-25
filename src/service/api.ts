@@ -802,7 +802,10 @@ export const getResult = async (
   //   totalNewsLettersFound: 56,
   //   totalEmailScan: 385,
   // };
-  const res = await axios.get(`${baseURL}getResults?duration=${duration}`, {
+  const url = duration
+    ? `${baseURL}getResults?duration=${duration}`
+    : `${baseURL}getResults`;
+  const res = await axios.get(url, {
     withCredentials: true,
   });
   return res.data;
