@@ -42,22 +42,22 @@ const reducer = (
     case "UPDATE_DATA": {
       const totals = filterScanMail(action.payload.data, ReadStatus.notInUse);
       return {
-        totalEmailScan: totals.totalNewsLetterCount,
+        totalEmailScan: action.payload.totalEmailScan,
         data: action.payload.data,
         totalNewsLetterFound: totals.totalNewsLetterMail,
         totalEmailSize: totals.totalEmailSize,
-        totalNewsLetterMail: action.payload.data.length,
+        totalNewsLetterMail: totals.totalNewsLetterCount,
         duration: state.duration,
       };
     }
     case "SET_SCAN_DURATION": {
       const calTotal = filterScanMail(state.data, action.payload.duration);
       return {
-        totalEmailScan: calTotal.totalNewsLetterCount,
+        totalEmailScan: state.totalEmailScan,
         data: state.data,
         totalNewsLetterFound: calTotal.totalNewsLetterMail,
         totalEmailSize: calTotal.totalEmailSize,
-        totalNewsLetterMail: state.data.length,
+        totalNewsLetterMail: calTotal.totalNewsLetterCount,
         duration: action.payload.duration,
       };
     }
