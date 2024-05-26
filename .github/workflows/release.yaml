@@ -2,7 +2,8 @@ name: Release
 
 on:
   push:
-    branches: ["release-branch"]
+    tags:
+      - "v-release*.*" # Adjust the tag pattern as needed
 
 jobs:
   release:
@@ -19,6 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Pull latest changes from master
+        run: |
+          git checkout -b release-branch
+          git pull origin master
 
       - name: Run Semantic Release
         env:
