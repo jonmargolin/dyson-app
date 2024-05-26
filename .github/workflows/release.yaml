@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    branches: ["master"]
+    branches: ["release-branch"]
 
 jobs:
   release:
@@ -24,3 +24,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+
+      - name: Create Pull Request for Release
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(release): ${nextRelease.version} [skip ci]"
+          branch: release-branch
+          title: "Release ${nextRelease.version}"
+          body: "This pull request includes the release of version ${nextRelease.version}."
+          base: master
