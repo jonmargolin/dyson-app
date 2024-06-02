@@ -15,6 +15,7 @@ export default {
       colors: {
         home: "#F1F7ED",
         textBlue: "#481AFF",
+        greyPink: "#EBE9FF",
         greyText: "#595B60",
         grey500: "#E7E9EF",
         red500: "#EE2543",

@@ -56,6 +56,12 @@
   },
   "scanPage": {
     "title": "Choose what you’d like to delete.",
+    "lightClean": {
+      "title": "Light Clean",
+      "subTitle": "Last read mail- 1 year ago",
+      "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat massa a gravida iaculis. Maecenas suscipit a lectus ac varius.mper ac nec arcu. ",
+      "btn": "I want a light clean"
+    },
     "scanOption-1": {
       "title": "Last read email was sent over",
       "colorText": "1 year",
