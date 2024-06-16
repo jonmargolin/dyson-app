@@ -4,13 +4,11 @@ import InfoLoader from "./InfoLoader";
 import ScanInfoContent from "./SacnInfoContent";
 import { useScanDataContext } from "./scanContext";
 import { ReadStatus } from "../type";
-import useScanInfo from "../../hooks/useScaninfo";
 import useStatusCheck from "../../hooks/useStatusCheck";
 import { useNavigate } from "react-router-dom";
 
 const ScanInfo = () => {
   const { res, isLoading, refetch } = useInfoResults();
-  const { scan } = useScanInfo();
   const { dispatch } = useScanDataContext();
   const { mutate } = useStatusCheck();
   const navigate = useNavigate();
@@ -25,8 +23,8 @@ const ScanInfo = () => {
       });
     }
   }, [dispatch, res]);
-  const sendReadStatus = () => {
-    mutate(scan.duration, {
+  const sendReadStatus = (duration: ReadStatus) => {
+    mutate(duration, {
       onSuccess: () => navigate("/info"),
       onError: () => navigate("/info"),
     });

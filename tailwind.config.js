@@ -19,7 +19,12 @@ export default {
         greyText: "#595B60",
         grey500: "#E7E9EF",
         red500: "#EE2543",
+        customStart: "#471BFF",
+        customEnd: "#7C5CFF",
       },
+      backgroundImage: () => ({
+        customGradient: "linear-gradient(to right, #471BFF, #7C5CFF)",
+      }),
       fontFamily: {
         Rubik: "Rubik",
       },

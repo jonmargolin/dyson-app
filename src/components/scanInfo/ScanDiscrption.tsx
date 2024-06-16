@@ -1,13 +1,16 @@
+import FreshStart from "./FreshStart";
 import LightClean from "./LightClean";
-
-const ScanDescription = () => {
+type ScanDescriptionProps = {
+  onClick: (value: string) => void;
+};
+const ScanDescription = ({ onClick }: ScanDescriptionProps) => {
   return (
-    <div className="flex justify-between">
-      <div className="w-[45%] shadow-xl">
-        <LightClean />
+    <div className="flex justify-between max-sm:flex-col max-sm:items-center">
+      <div className="w-[45%] shadow-xl max-sm:w-[80%]">
+        <LightClean onClick={onClick} />
       </div>
-      <div className="w-[45%] shadow-xl">
-        <LightClean />{" "}
+      <div className="w-[45%] shadow-xl max-sm:w-[80%]">
+        <FreshStart onClick={onClick} />{" "}
       </div>
     </div>
   );
