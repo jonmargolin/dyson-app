@@ -15,7 +15,7 @@ const FreshStart = ({ onClick }: ScanDescriptionProps) => {
           ⭐ Recommended
         </div>
       </div>
-      <div className=" flex flex-col mb-8 pt-4">
+      <div className=" flex flex-col mb-8 pt-4 max-sm:mb-4">
         <p className="text-24 font-bold">{t("scanPage.freshStart.title")} </p>
         <p className="text-16 text-greyText">
           {" "}

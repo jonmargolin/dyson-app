@@ -12,7 +12,7 @@ const LightClean = ({ onClick }: ScanDescriptionProps) => {
       <div className="flex justify-between">
         <Light />
       </div>
-      <div className=" flex flex-col mb-8 pt-4">
+      <div className=" flex flex-col mb-8 pt-4 max-sm:mb-4">
         <p className="text-24 font-bold">{t("scanPage.lightClean.title")} </p>
         <p className="text-16 text-greyText">
           {" "}
