@@ -35,10 +35,7 @@ const Info = () => {
       }
       const { newslettersProcessed, totalNewsletterProcessed, emailsDeleted } =
         res;
-      if (
-        newslettersProcessed === totalNewsletterProcessed &&
-        emailsDeleted > 0
-      ) {
+      if (newslettersProcessed === totalNewsletterProcessed) {
         setDataReady(true);
         refetch();
         clearInterval(interval);
