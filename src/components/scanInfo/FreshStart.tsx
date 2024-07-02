@@ -29,12 +29,11 @@ const FreshStart = ({ onClick, isDisabled }: ScanDescriptionProps) => {
           width={"80"}
           variant={"round"}
           onClick={() => onClick("1")}
-          className="text-24"
+          className={`${isDisabled ? "pointer-events-none" : "pointer-events-auto"} text-24`}
           color="white"
           border={"1px solid"}
           padding={"2rem"}
           background={"bg-customGradient"}
-          disabled={isDisabled}
         >
           {t("scanPage.freshStart.btn")}
         </Button>
