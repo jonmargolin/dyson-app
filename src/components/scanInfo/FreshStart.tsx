@@ -34,6 +34,7 @@ const FreshStart = ({ onClick, isDisabled }: ScanDescriptionProps) => {
           border={"1px solid"}
           padding={"2rem"}
           background={"bg-customGradient"}
+          disabled={isDisabled}
         >
           {t("scanPage.freshStart.btn")}
         </Button>

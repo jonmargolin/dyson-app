@@ -31,6 +31,7 @@ const LightClean = ({ onClick, isDisabled }: ScanDescriptionProps) => {
           border={"1px solid"}
           padding={"2rem"}
           background={"white"}
+          disabled={isDisabled}
         >
           {t("scanPage.lightClean.btn")}
         </Button>
